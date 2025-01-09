@@ -1,35 +1,22 @@
-package ru.max.javaspringboot.SpringBootGet_223.service;
+package ru.max.javaspringboot.SpringBoot_Lombok_224.service;
 
+import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
-import ru.max.javaspringboot.SpringBootGet_223.config.LoanProperties;
-import ru.max.javaspringboot.SpringBootGet_223.model.Car;
-import ru.max.javaspringboot.SpringBootGet_223.model.User;
-import ru.max.javaspringboot.SpringBootGet_223.repository.CarRepository;
-import ru.max.javaspringboot.SpringBootGet_223.repository.UserRepository;
+import ru.max.javaspringboot.SpringBoot_Lombok_224.config.LoanProperties;
+import ru.max.javaspringboot.SpringBoot_Lombok_224.model.Car;
+import ru.max.javaspringboot.SpringBoot_Lombok_224.model.User;
+import ru.max.javaspringboot.SpringBoot_Lombok_224.repository.CarRepository;
+import ru.max.javaspringboot.SpringBoot_Lombok_224.repository.UserRepository;
 
 @Service
+@AllArgsConstructor
 public class LoanService {
 
-    @Autowired
     private final CarRepository carRepository;
-
-    @Autowired
     private final UserRepository userRepository;
-
-    @Autowired
     private final IncomeService incomeService;
-
-    @Autowired
     private final LoanProperties loanProperties;
-
-    public LoanService(CarRepository carRepository, UserRepository userRepository, IncomeService incomeService, LoanProperties loanProperties) {
-        this.carRepository = carRepository;
-        this.userRepository = userRepository;
-        this.incomeService = incomeService;
-        this.loanProperties = loanProperties;
-    }
 
     public Double approveLoan(Long userId) {
         User user = userRepository.findById(userId).orElse(null);

@@ -1,4 +1,4 @@
-package ru.max.javaspringboot.SpringBootGet_223;
+package ru.max.javaspringboot.SpringBoot_Lombok_224;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

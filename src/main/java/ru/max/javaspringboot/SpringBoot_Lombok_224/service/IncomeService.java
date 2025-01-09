@@ -1,15 +1,10 @@
-package ru.max.javaspringboot.SpringBootGet_223.service;
+package ru.max.javaspringboot.SpringBoot_Lombok_224.service;
 
+import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.ParameterizedTypeReference;
-import org.springframework.http.HttpMethod;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
-import org.springframework.web.client.RestClientException;
 import org.springframework.web.client.RestTemplate;
-import ru.max.javaspringboot.SpringBootGet_223.model.User;
-
-import java.util.List;
+import ru.max.javaspringboot.SpringBoot_Lombok_224.model.User;
 
 @Service
 public class IncomeService {

@@ -1,4 +1,4 @@
-package ru.max.javaspringboot.SpringBootGet_223.config;
+package ru.max.javaspringboot.SpringBoot_Lombok_224.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
